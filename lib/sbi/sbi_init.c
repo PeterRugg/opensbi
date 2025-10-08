@@ -352,6 +352,7 @@ static void hpm_init()
     "li t0, 0xfffffff8\n\t"
     // enable user access -- questionable practice here...
     "csrs mcounteren, t0\n\t"
+    "csrs scounteren, t0\n\t"
     // un-inhibit all counters
     "csrc mcountinhibit, t0\n\t"
     : // no outputs
